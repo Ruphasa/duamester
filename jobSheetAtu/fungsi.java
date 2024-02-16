@@ -31,10 +31,18 @@ public class fungsi {
 
             switch (option) {
                 case 1:
+                    ClearScreen();
                     untungKotor(stock);
                     break;
                 case 2:
+                    ClearScreen();
                     stock=penguranganStock(stock, sc);
+                    break;
+                case 3:
+                    exit=true;
+                    ClearScreen();
+                    System.out.println("cyaa~");
+                    break;
                 default:
                     System.out.println("WRONG INPUT!");
             }

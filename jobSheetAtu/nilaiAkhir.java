@@ -9,31 +9,30 @@ public class nilaiAkhir {
         float UTS;
         float UAS;
         float nilaiAkhir = 0;
-        String nilaiHuruf;
         boolean valid = true;
 
         Scanner sc = new Scanner(System.in);
 
         System.out.println("======================");
-        System.out.print("Masukkan Nilai Tugas: ");
+        System.out.print("Masukkan Nilai Tugas : ");
         tugas = sc.nextFloat();
         if (tugas > 100) {
             valid = false;
         }
         tugas *= 0.2f;
-        System.out.print("Masukkan Niali Kuis: ");
+        System.out.print("Masukkan Niali Kuis : ");
         kuis = sc.nextFloat();
         if (kuis > 100) {
             valid = false;
         }
         kuis *= 0.2f;
-        System.out.print("Masukkan Niali UTS: ");
+        System.out.print("Masukkan Niali UTS : ");
         UTS = sc.nextFloat();
         if (UTS > 100) {
             valid = false;
         }
         UTS *= 0.3f;
-        System.out.print("Masukkan Niali UAS: ");
+        System.out.print("Masukkan Niali UAS : ");
         UAS = sc.nextFloat();
         if (UAS > 100) {
             valid = false;

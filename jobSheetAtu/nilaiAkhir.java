@@ -42,7 +42,7 @@ public class nilaiAkhir {
         System.out.println("======================");
         if (valid == false) {
             System.out.println("==================");
-            System.out.println("nilai tidak valid");
+            System.out.println("NILAI TIDAK VALID!");
             System.out.println("==================");
         } else {
             System.out.println("==================");
@@ -63,7 +63,7 @@ public class nilaiAkhir {
                 System.out.println("Nilai Huruf : E");
             }
             System.out.println("==================");
-            System.out.println("SELAMAT ANDA LULUS");
+            System.out.println("SELAMAT ANDA LULUS :)");
         }
     }
 }

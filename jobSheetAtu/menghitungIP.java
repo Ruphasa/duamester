@@ -65,10 +65,11 @@ public class menghitungIP {
         System.out.println("=====================");
         System.out.println("Hasil Konversi Nilai");
         System.out.println("=====================");
-        System.out.println("MK                                   Nilai Angka                            Niali Huruf                             Bobot Nilai");
+        System.out.println("MK                                   Nilai Angka       Niali Huruf          Bobot Nilai");
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                System.out.print(array[i][j]+" ".repeat(40-array[i][j].length()));
+            System.out.print(array[i][0]+" ".repeat(40-array[i][0].length()));
+            for (int j = 1; j < array[i].length; j++) {
+                System.out.print(array[i][j]+" ".repeat(20-array[i][j].length()));
             }
             System.out.println();
         }

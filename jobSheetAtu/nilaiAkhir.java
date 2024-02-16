@@ -16,25 +16,25 @@ public class nilaiAkhir {
         System.out.println("======================");
         System.out.print("Masukkan Nilai Tugas : ");
         tugas = sc.nextFloat();
-        if (tugas > 100) {
+        if (tugas > 100 || tugas < 0) {
             valid = false;
         }
         tugas *= 0.2f;
         System.out.print("Masukkan Niali Kuis : ");
         kuis = sc.nextFloat();
-        if (kuis > 100) {
+        if (kuis > 100 || kuis < 0) {
             valid = false;
         }
         kuis *= 0.2f;
         System.out.print("Masukkan Niali UTS : ");
         UTS = sc.nextFloat();
-        if (UTS > 100) {
+        if (UTS > 100 || UTS < 0) {
             valid = false;
         }
         UTS *= 0.3f;
         System.out.print("Masukkan Niali UAS : ");
         UAS = sc.nextFloat();
-        if (UAS > 100) {
+        if (UAS > 100 || UAS < 0) {
             valid = false;
         }
         UAS *= 0.3f;

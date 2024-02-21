@@ -5,12 +5,16 @@ public class Buku24 {
     String judul, pengarang;
     int halaman, stok, harga;
 
+    Buku24() {
+
+    }
+
     Buku24(String jud, String pg, int hal, int stok, int har) {
-        judul=jud;
-        pengarang=pg;
-        halaman=hal;
-        this.stok=stok;
-        harga=har;
+        judul = jud;
+        pengarang = pg;
+        halaman = hal;
+        this.stok = stok;
+        harga = har;
     }
 
     void tampilkanInformasi() {
@@ -33,7 +37,27 @@ public class Buku24 {
         stok += jml;
     }
 
-    void gantiHarga(int hrg) {
-        harga = hrg;
+    int gantiHarga(int hrg) {
+        return harga = hrg;
+    }
+
+    int hitungHargaTotal(int jml, int hrg) {
+        return harga = hrg * jml;
+    }
+
+    int hitungDiskon(int hrgTotal) {
+        int hargaDisc;
+        if (hrgTotal > 150000) {
+            hargaDisc = (int)(hrgTotal * 0.12);
+        } else if (hrgTotal > 75000) {
+            hargaDisc = (int)(hrgTotal * 0.05);
+        } else {
+            hargaDisc = 0;
+        }
+        return hargaDisc;
+    }
+
+    void hitungbayar(int hargaTotal, int hargaDiscount) {
+        System.out.println(hargaTotal - hargaDiscount);
     }
 }

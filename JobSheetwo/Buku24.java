@@ -5,6 +5,14 @@ public class Buku24 {
     String judul, pengarang;
     int halaman, stok, harga;
 
+    Buku24(String jud, String pg, int hal, int stok, int har) {
+        judul=jud;
+        pengarang=pg;
+        halaman=hal;
+        this.stok=stok;
+        harga=har;
+    }
+
     void tampilkanInformasi() {
         System.out.println("Judul: " + judul);
         System.out.println("Pengarang: " + pengarang);
@@ -14,9 +22,9 @@ public class Buku24 {
     }
 
     void terjual(int jml) {
-        if (stok>0) {
+        if (stok > 0) {
             stok -= jml;
-        }else{
+        } else {
             System.out.println("stok habis");
         }
     }
@@ -24,7 +32,8 @@ public class Buku24 {
     void restock(int jml) {
         stok += jml;
     }
-    void gantiHarga(int hrg){
-        harga=hrg;
+
+    void gantiHarga(int hrg) {
+        harga = hrg;
     }
 }

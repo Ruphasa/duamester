@@ -1,7 +1,4 @@
-
-
-import JobSheetwo.Buku24;
-
+package JobSheetwo;
 public class BukuMain24 {
     public static void main(String[] args) {
         Buku24 bk1 = new Buku24();
@@ -19,5 +16,8 @@ public class BukuMain24 {
         Buku24 bk2 = new Buku24("Self Reward", "Maheera Ayesha", 160, 29, 59000);
         bk2.terjual(11);
         bk2.tampilkanInformasi();
+
+        Buku24 BukuRizqi = new Buku24("A Games Of Thrones", "George R. R. Martin", 640, 24, 350000 );
+        
     }
 }

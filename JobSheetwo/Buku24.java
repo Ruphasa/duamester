@@ -57,7 +57,7 @@ public class Buku24 {
         return hargaDisc;
     }
 
-    void hitungbayar(int hargaTotal, int hargaDiscount) {
-        System.out.println(hargaTotal - hargaDiscount);
+    int hitungbayar(int hargaTotal, int hargaDiscount) {
+        return (hargaTotal - hargaDiscount);
     }
 }

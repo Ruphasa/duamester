@@ -5,14 +5,21 @@ import java.util.Random;
 
 public class DragonMain {
     public static void main(String[] args) {
+
         int option;
         Scanner sc = new Scanner(System.in);
         Dragon dragon1 = new Dragon();
+        for (int i = 0; i < dragon1.map.length; i++) {
+            for (int j = 0; j < dragon1.map.length; j++) {
+                dragon1.map[i][j] = "   ";
+            }
+        }
         Random random = new Random();
-        dragon1.x = random.nextInt(10);
-        dragon1.y = random.nextInt(10);
-        dragon1.width = random.nextInt(10, 20);
-        dragon1.height = random.nextInt(10, 20);
+        dragon1.x = random.nextInt(5);
+        dragon1.y = random.nextInt(5);
+        dragon1.width = random.nextInt(5, 9);
+        dragon1.height = random.nextInt(5, 9);
+        dragon1.map[dragon1.y][dragon1.x] = " ^ ";
         do {
             System.out.print("\033[H\033[2J");
             System.out.flush();
@@ -38,6 +45,6 @@ public class DragonMain {
                 default:
                     continue;
             }
-        } while (dragon1.gameOver==false);
+        } while (dragon1.gameOver == false);
     }
 }

@@ -4,6 +4,9 @@ public class Buku24 {
 
     String judul, pengarang;
     int halaman, stok, harga;
+    int hargaBayar, hargaDisc;
+    int jumlah;
+
 
     Buku24() {
 
@@ -27,6 +30,7 @@ public class Buku24 {
 
     void terjual(int jml) {
         if (stok > 0) {
+            jumlah=jml;
             stok -= jml;
         } else {
             System.out.println("stok habis");
@@ -34,6 +38,7 @@ public class Buku24 {
     }
 
     void restock(int jml) {
+        jumlah=jml;
         stok += jml;
     }
 
@@ -41,23 +46,21 @@ public class Buku24 {
         return harga = hrg;
     }
 
-    int hitungHargaTotal(int jml, int hrg) {
-        return harga = hrg * jml;
+    int hitungHargaTotal() {
+        return harga * jumlah;
     }
 
-    int hitungDiskon(int hrgTotal) {
-        int hargaDisc;
-        if (hrgTotal > 150000) {
-            hargaDisc = (int)(hrgTotal * 0.12);
-        } else if (hrgTotal > 75000) {
-            hargaDisc = (int)(hrgTotal * 0.05);
+    int hitungDiskon() {
+        if (hargaBayar > 150000) {
+            return (int)(hargaBayar * 0.12);
+        } else if (hargaBayar > 75000) {
+            return hargaDisc = (int)(hargaBayar * 0.05);
         } else {
-            hargaDisc = 0;
+            return hargaDisc = 0;
         }
-        return hargaDisc;
     }
 
-    int hitungbayar(int hargaTotal, int hargaDiscount) {
-        return (hargaTotal - hargaDiscount);
+    int hitungbayar() {
+        return (hargaBayar - hargaDisc);
     }
 }

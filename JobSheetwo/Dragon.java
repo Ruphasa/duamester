@@ -4,40 +4,72 @@ public class Dragon {
 
     int x, y, width, height;
     boolean gameOver;
+    String map[][] = new String[10][10];
 
-    void moveLeft(){
-        x++;
-        if (x>width) {
+    void moveLeft() {
+        if (x - 1 < 0) {
             detectCollision(x, y);
-        }
-    }
-    void moveRight(){
-        x--;
-        if (x<0) {
-            detectCollision(x, y);
-        }
-    }
+        } else if (map[y][x - 1].equals(" * ")) {
+            System.out.println("You have been here!");
+        } else {
+            map[y][x] = " * ";
+            x--;
+            map[y][x] = " ^ ";
 
-    void moveUp(){
-        y--;
-        if (y<0) {
-            detectCollision(x, y);
         }
     }
 
-    void moveDown(){
-        y++;
-        if (y>height) {
-            detectCollision(x, y);
+    void moveRight() {
+        if (x + 1 > width) {
+            detectCollision(y, x);
+        } else if (map[y][x + 1].equals(" * ")) {
+            System.out.println("You have been here!");
+        } else {
+            map[y][x] = " * ";
+            x++;
+            map[y][x] = " ^ ";
         }
     }
 
-    void printPosition(){
-        System.out.println("("+x+","+y+")");
+    void moveUp() {
+        if (y - 1 < 0) {
+            detectCollision(x, y);
+        } else if (map[y - 1][x].equals(" * ")) {
+            System.out.println("You have been here!");
+        } else {
+            map[y][x] = " * ";
+            y--;
+            map[y][x] = " ^ ";
+        }
     }
 
-    void detectCollision(int x,int y){
+    void moveDown() {
+        if (y + 1 > height) {
+            detectCollision(y, x);
+        } else if (map[y + 1][x].equals(" * ")) {
+            System.out.println("You have been here!");
+        } else {
+            map[y][x] = " * ";
+            y++;
+            map[y][x] = " ^ ";
+        }
+    }
+
+    void printPosition() {
+        System.out.println("+------------------------------+");
+        for (int i = 0; i < map.length; i++) {
+            System.out.print("|");
+            for (int j = 0; j < map[i].length; j++) {
+                System.out.print(map[i][j]);
+            }
+            System.out.print("|\n");
+        }
+        System.out.println("+------------------------------+");
+        System.out.println("(" + y + "," + x + ")");
+    }
+
+    void detectCollision(int x, int y) {
         System.out.println("GAME OVER ~");
-        gameOver=true;
+        gameOver = true;
     }
 }

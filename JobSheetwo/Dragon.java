@@ -8,7 +8,7 @@ public class Dragon {
 
     void moveLeft() {
         if (x - 1 < 0) {
-            detectCollision(x, y);
+            detectCollision(y, x);
         } else if (map[y][x - 1].equals(" * ")) {
             System.out.println("You have been here!");
         } else {
@@ -33,7 +33,7 @@ public class Dragon {
 
     void moveUp() {
         if (y - 1 < 0) {
-            detectCollision(x, y);
+            detectCollision(y, x);
         } else if (map[y - 1][x].equals(" * ")) {
             System.out.println("You have been here!");
         } else {
@@ -69,6 +69,21 @@ public class Dragon {
     }
 
     void detectCollision(int x, int y) {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        System.out.println("+------------------------------+");
+        for (int i = 0; i < map.length; i++) {
+            System.out.print("|");
+            for (int j = 0; j < map[i].length; j++) {
+                if (i>=height||j>=width) {
+                    System.out.print(" X ");
+                }else{
+                    System.out.print(map[i][j]);
+                }
+            }
+            System.out.print("|\n");
+        }
+        System.out.println("+------------------------------+");
         System.out.println("GAME OVER ~");
         gameOver = true;
     }

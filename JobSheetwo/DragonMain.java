@@ -6,7 +6,7 @@ import java.util.Random;
 public class DragonMain {
     public static void main(String[] args) {
 
-        int option;
+        String option;
         Scanner sc = new Scanner(System.in);
         Dragon dragon1 = new Dragon();
         for (int i = 0; i < dragon1.map.length; i++) {
@@ -25,22 +25,22 @@ public class DragonMain {
             System.out.flush();
             dragon1.printPosition();
             System.out.println("Where you want to go?");
-            System.out.println("1. Move Down");
-            System.out.println("2. Move Up");
-            System.out.println("3. Move Left");
-            System.out.println("4. Move Right");
-            option = sc.nextInt();
+            System.out.println("s. Move Down");
+            System.out.println("w. Move Up");
+            System.out.println("a. Move Left");
+            System.out.println("d. Move Right");
+            option = sc.nextLine();
             switch (option) {
-                case 1:
+                case "s":
                     dragon1.moveDown();
                     break;
-                case 2:
+                case "w":
                     dragon1.moveUp();
                     break;
-                case 3:
+                case "a":
                     dragon1.moveLeft();
                     break;
-                case 4:
+                case "d":
                     dragon1.moveRight();
                 default:
                     continue;

@@ -52,7 +52,7 @@ public class BukuMain24 {
                     BukuRizqi.terjual(jml);
                     BukuRizqi.hargaBayar = BukuRizqi.hitungHargaTotal();
                     BukuRizqi.hargaDisc = BukuRizqi.hitungDiskon();
-                    System.out.println("Harga Total : " + BukuRizqi.hitungHargaTotal());
+                    System.out.println("Harga Total : " + BukuRizqi.hitungbayar());
                     anything = sc.nextLine();
                     break;
                 case 3:

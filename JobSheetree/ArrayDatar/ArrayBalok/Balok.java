@@ -1,4 +1,4 @@
-package JobSheetree.ArrayBalok;
+package JobSheetree.ArrayDatar.ArrayBalok;
 
 public class Balok {
     int panjang;

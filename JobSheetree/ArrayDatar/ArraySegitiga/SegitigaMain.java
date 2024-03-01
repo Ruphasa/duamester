@@ -1,6 +1,6 @@
-package JobSheetree.ArrayBalok;
+package JobSheetree.ArrayDatar.ArraySegitiga;
 
-public class mainSegitiga {
+public class SegitigaMain {
     public static void main(String[] args) {
         segitiga[] sgArray = new segitiga[4];
         int[][] data = {

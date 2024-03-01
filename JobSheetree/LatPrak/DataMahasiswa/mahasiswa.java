@@ -1,4 +1,4 @@
-package JobSheetree.LatPrak;
+package JobSheetree.LatPrak.DataMahasiswa;
 
 public class mahasiswa {
     String nama;

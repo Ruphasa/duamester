@@ -1,4 +1,4 @@
-package JobSheetree;
+package JobSheetree.ArrayOfObject;
 
 public class PersegiPanjang {
     int panjang;

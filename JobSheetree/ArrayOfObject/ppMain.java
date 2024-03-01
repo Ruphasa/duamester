@@ -1,8 +1,8 @@
-package JobSheetree;
+package JobSheetree.ArrayOfObject;
 
 import java.util.Scanner;
 
-public class Arrayobject {
+public class ppMain {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);

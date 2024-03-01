@@ -1,8 +1,8 @@
-package JobSheetree.LatPrak;
+package JobSheetree.LatPrak.BangunRuang;
 
 import java.util.Scanner;
 
-public class mainBangun {
+public class bangunRuangMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         bangunRuang[] arrayBangunRuang = new bangunRuang[3];

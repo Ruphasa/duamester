@@ -1,6 +1,6 @@
-package JobSheetree.ArrayBalok;
+package JobSheetree.ArrayDatar.ArrayBalok;
 
-public class mainBalok {
+public class BalokMain {
     public static void main(String[] args) {
         
         Balok[] blArray = new Balok[3];

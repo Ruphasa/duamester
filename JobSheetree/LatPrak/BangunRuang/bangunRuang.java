@@ -1,4 +1,4 @@
-package JobSheetree.LatPrak;
+package JobSheetree.LatPrak.BangunRuang;
 
 public class bangunRuang {
     int sisi;

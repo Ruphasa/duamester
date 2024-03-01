@@ -1,4 +1,4 @@
-package JobSheetree.LatPrak;
+package JobSheetree.LatPrak.DataMahasiswa;
 
 import java.util.Scanner;
 

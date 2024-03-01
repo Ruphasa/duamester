@@ -1,4 +1,4 @@
-package JobSheetree.ArrayBalok;
+package JobSheetree.ArrayDatar.ArraySegitiga;
 
 public class segitiga {
     int alas;

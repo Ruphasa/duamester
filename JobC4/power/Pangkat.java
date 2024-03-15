@@ -1,7 +1,12 @@
-package minggu5;
+package power;
 
 public class Pangkat {
     int nilai, pangkat;
+
+    Pangkat(int n, int p) {
+        nilai = n;
+        pangkat = p;
+    }
 
     int pangkatBF(int a, int n) {
         int hasil = 1;

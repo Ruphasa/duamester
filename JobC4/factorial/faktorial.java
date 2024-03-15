@@ -1,4 +1,4 @@
-package BruteForcDivedeConquer;
+package factorial;
 
 /**
  * faktorial

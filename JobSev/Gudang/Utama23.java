@@ -8,26 +8,28 @@ public class Utama23 {
         System.out.print("Berapa kapasitas Gudang anda? ");
         int kapasitas = scanner.nextInt();
         Gudang23 gudang = new Gudang23(kapasitas);
-
-        while (true) {
+        boolean exit=false;
+        while (exit != true) {
             System.out.println("\nMenu:");
             System.out.println("1. Tambah Barang");
             System.out.println("2. Ambil Barang");
             System.out.println("3. Tampilkan tumpukan barang");
             System.out.println("4. Tampilkan tumpukan barang teratas");
-            System.out.println("5. Keluar");
+            System.out.println("5. Tampilkan tumpukan barang terbawah");
+            System.out.println("6. Cari Barang");
+            System.out.println("7. Keluar");
             System.out.println("Pilih operasi: ");
             int pilihan = scanner.nextInt();
             scanner.nextLine();
 
             switch (pilihan) {
                 case 1:
-                    System.out.println("Masukkan kode barang: ");
+                    System.out.print("Masukkan kode barang: ");
                     int kode = scanner.nextInt();
                     scanner.nextLine();
-                    System.out.println("Masukkan nama barang: ");
+                    System.out.print("Masukkan nama barang: ");
                     String nama = scanner.nextLine();
-                    System.out.println("Masukkan nama kategori: ");
+                    System.out.print("Masukkan nama kategori: ");
                     String kategori = scanner.nextLine();
                     Barang23 barangBaru = new Barang23(kode, nama, kategori);
                     gudang.tambahBarang(barangBaru);
@@ -42,6 +44,13 @@ public class Utama23 {
                     gudang.lihatBarangTeratas();
                     break;
                 case 5:
+                    gudang.lihatBarangTerbawah();
+                    break;
+                case 6:
+                    gudang.cariBarang();
+                    break;
+                case 7:
+                    exit = true;
                     break;
                 default:
                     System.out.println("Pilihan tidak valid. Silakan coba lagi.");

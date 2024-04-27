@@ -66,8 +66,8 @@ public class Queue {
                 data[tail] = dt;
                 size++;
             } else {
-                if (isEmpty())
-                    head = tail = 0;
+                if (tail == max - 1)
+                    tail = 0;
                 else
                     tail++;
             }
@@ -83,7 +83,7 @@ public class Queue {
         else {
             dt = data[head];
             size--;
-            if (head == tail)
+            if (head == max - 1)
                 head = 0;
             else
                 head++;

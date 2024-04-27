@@ -28,6 +28,9 @@ public class QueueMain {
                 case 1:
                     System.out.print("Masukkan data baru: ");
                     int dataMasuk = sc.nextInt();
+                    if (Q.isFull()) {
+                        System.exit(dataMasuk);
+                    }
                     Q.enqueue(dataMasuk);
                     break;
                 case 2:
@@ -35,6 +38,8 @@ public class QueueMain {
                     if (dataKeluar != -1) {
                         System.out.println("Data yang keluar: " + dataKeluar);
                         break;
+                    }else{
+                        System.exit(dataKeluar);
                     }
                 case 3:
                     Q.print();

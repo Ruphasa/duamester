@@ -36,6 +36,13 @@ public class Queue {
             System.out.println("Queue masih kosong");
     }
 
+    void peekTail() {
+        if (!isEmpty())
+            System.out.println("Elemen terbelakang : " + data[tail].norek + " " + data[tail].nama + " " + data[tail].alamat
+                    + " " + data[tail].umur + " " + data[tail].saldo);
+        else
+            System.out.println("Queue masih kosong");
+    }
     void print() {
         if (isEmpty())
             System.out.println("Queue masih kosong");

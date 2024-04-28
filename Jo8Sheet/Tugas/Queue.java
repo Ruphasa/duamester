@@ -43,7 +43,16 @@ public class Queue {
     }
 
     void peekPosition(String cari){
-
+        int i = head;
+        int j = 1;
+        while (i != tail) {
+            if (data[i].nama.equals(cari)) {
+                System.out.println("Antrian ke-" + j + " : " + data[i].nama + " " + data[i].noHP + " ");
+                break;
+            }
+            i = (i + 1) % max;
+            j++;
+        }
     }
     void daftarPembeli() {
         if (isEmpty())

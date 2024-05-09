@@ -10,6 +10,7 @@ public class PembeliMain {
         System.out.println("3. Cek Pembeli terdepan");
         System.out.println("4. Cek Semua Pembeli");
         System.out.println("5. Cek Pembeli terbelakang");
+        System.out.println("6. Cari nama pembeli");
         System.out.println("-------------------------------");
     }
     public static void main(String[] args) {
@@ -49,6 +50,11 @@ public class PembeliMain {
                     break;
                 case 5:
                     antri.peekTail();
+                    break;
+                case 6:
+                    System.out.print("Cari : ");
+                    String cari = sc.nextLine();
+                    antri.peekPosition(cari);
                     break;
                 default:
                     System.out.println("Pilihan tidak ada");

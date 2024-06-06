@@ -58,6 +58,7 @@ public class DoubleLinkedList23 {
                 if (current.next!=null) {
                     current.next.prev = current.prev;
                 }
+                size--;
                 break;
             }
             current = current.next;
